@@ -1,6 +1,6 @@
 [! SSBLF FORMAT !]
 // Enables terminal mode
-terminal.enabled(1)
+terminal.enabled(true)
 terminal.text("Running SillyOSinstaller.ssblf")
 // Gives the user of a choice between what they want to do
 terminal.choose("output", "What would you like to do?", ["1 - Install SillyOS", "2 - Import File System", "3 - Import From URL"])
@@ -25,7 +25,7 @@ else
   script.jump(1)
 end
 // Disables terminal mode, NOTHING should be past this, expect the start of SillyOS installation
-terminal.enabled(0)
+terminal.enabled(false)
 
 // << Start of SillyOS installation
 // !!! ⚠⚠⚠ !!! when updating ANYTHING before this, make sure to update the jump at "Install SillyOS" !!! ⚠⚠⚠ !!!
@@ -36,4 +36,4 @@ fs.new("/startup.ssblf","{startupfile}")
 fs.run("/startup.ssblf")
 
 // Alright, for real, NOTHING past this disable terminal
-terminal.enabled(0)
+terminal.enabled(false)
