@@ -1,1 +1,19 @@
 [! SSBLF FORMAT !]
+terminal.text("Running SillyOSinstaller.ssblf")
+output = terminal.choose("What would you like to do?",["1 - Install SillyOS","2 - Import File System","3 - Import From URL"])
+if(output == 1)
+  terminal.text("Installing SillyOS")
+elseif(output == 2)
+  filesystem = terminal.ask("Paste in the json then press ENTER")
+  terminal.text("Importing File System")
+  fs.import(filesystem)
+elseif(output == 3)
+  url = terminal.ask("Input the URL")
+  terminal.text("Grabbing data from URL")
+  filesystem = internet.get(url)
+  terminal.text("Importing File System")
+  fs.import(filesystem)
+else
+  terminal.text("Invalid output")
+  script.jump(1)
+end
