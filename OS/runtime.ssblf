@@ -2,4 +2,9 @@
 // Runtime, runs as quickly as it can. This is the main script
 // This has no Vsync (yet)
 
+screen.fill(0,0,0)
+For each item in array ("windowjson","{g.windows}")
+
+
+// Creates a loop
 script.jump(1)
