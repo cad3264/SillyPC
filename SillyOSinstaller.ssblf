@@ -5,24 +5,24 @@ terminal.text("Running SillyOSinstaller.ssblf")
 // Gives the user of a choice between what they want to do
 terminal.choose("output", "What would you like to do?", ["1 - Install SillyOS", "2 - Import File System", "3 - Import From URL"])
 if("{output}", "=", "1")
-  // Install SillyOS
-  terminal.text("Installing SillyOS")
-  script.jump(29)
+// Install SillyOS
+terminal.text("Installing SillyOS")
+script.jump(29)
 elseif(output == 2)
-  // Make the user input json, then import it
-  terminal.ask("filesystem", "Paste in the json then press ENTER")
-  terminal.text("Importing File System")
-  fs.import("{filesystem}")
+// Make the user input json, then import it
+terminal.ask("filesystem", "Paste in the json then press ENTER")
+terminal.text("Importing File System")
+fs.import("{filesystem}")
 elseif(output == 3)
-  // Make the user input a URL, then grab the data from the URL, and import it.
-  terminal.ask("url","Input the URL")
-  terminal.text("Grabbing data from URL")
-  internet.get("filesystem", "{url}")
-  terminal.text("Importing File System")
-  fs.import("{filesystem}")
+// Make the user input a URL, then grab the data from the URL, and import it.
+terminal.ask("url","Input the URL")
+terminal.text("Grabbing data from URL")
+internet.get("filesystem", "{url}")
+terminal.text("Importing File System")
+fs.import("{filesystem}")
 else
-  terminal.text("Invalid output")
-  script.jump(1)
+terminal.text("Invalid output")
+script.jump(1)
 end
 // Disables terminal mode, NOTHING should be past this, expect the start of SillyOS installation
 terminal.enabled(false)
