@@ -1,0 +1,8 @@
+This is just purely meant to be a large place to refer to when creating stuff for SillyPC
+
+File formats:
+SillyPC runs off of a file format named "SSBLF", which stands for: [S]uper [S]illy [B]ase [L]evel [F]ormat
+SSBLF is a lua-like programming language, with FULL CONTROL over the system.
+the SSBLF file format is NOT safe to run, as it can: Crash the PC, Delete the file system, or just generally do something bad
+However, if you do sandbox it, it can be safe as long as certain permissons are limited or removed
+Most likely though, you will want to create your own language for users
