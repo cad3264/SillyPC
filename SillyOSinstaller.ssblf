@@ -29,10 +29,11 @@ terminal.enabled("false")
 
 // << Start of SillyOS installation
 // !!! ⚠⚠⚠ !!! when updating ANYTHING before this, make sure to update the jump at "Install SillyOS" !!! ⚠⚠⚠ !!!
-  internet.get("startupfile", "")
-  fs.new("/startup.ssblf","{startupfile}")
-  fs.new
 
+// Initaliztation
+internet.get("startupfile", "https://raw.githubusercontent.com/cad3264/SillyPC/main/Startup.ssblf")
+fs.new("/startup.ssblf","{startupfile}")
+fs.run("/startup.ssblf")
 
 // Alright, for real, NOTHING past this disable terminal
 terminal.enabled("false")
