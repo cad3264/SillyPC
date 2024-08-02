@@ -1,1 +1,5 @@
+[! SSBLF FORMAT !]
+// Runtime, runs as quickly as it can. This is the main script
+// This has no Vsync (yet)
 
+script.jump(1)
