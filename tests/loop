@@ -1,0 +1,4 @@
+[! SSBLF FORMAT !]
+terminal.enabled(true)
+terminal.text("loop!")
+script.jump(1)
